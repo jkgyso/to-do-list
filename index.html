@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="container">
+      <div id="date-time">
+        <p id="day"></p>
+        <p id="date"></p>
+        <p id="time"></p>
+      </div>
+
+      <div id="input-task">
+        <input type="text" placeholder="Enter a new task" />
+        <button id="add-task">Add task</button>
+      </div>
+
+      <div id="filter-section">
+        <button class="filter" id="all">All</button>
+        <button class="filter" id="pending">Pending</button>
+        <button class="filter" id="completed">Completed</button>
+      </div>
+
+          <ul id="tasks">
+        <li><input type="checkbox" checked><span>Check and respond to emails</span></input></li>
+        <li><input type="checkbox"><span>Review today's calendar and prepare for meetings</span></input></li>
+        <li><input type="checkbox"><span>Complete piroirty project tasks</span></input></li>
+    </ul>
+    </div>
+
+
+
+    <script src="./index.js"></script>
+  </body>
+</html>
