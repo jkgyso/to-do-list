@@ -6,18 +6,28 @@ const addTaskButton = document.querySelector('#add-task');
 const taskList = document.querySelector('ul');
 const filterButtons = document.querySelector('#filter-section');;
 
-
+let timeInterval; 
+let elapsedSeconds = 0; 
 const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+const showTime = () => {
+    currentTime.textContent = new Date().toLocaleTimeString('en-US');
+}
+
 
 const showTimeAndDate = () => {
 
     const dateStr = new Date().toDateString();
     const trimDate = dateStr.split(' ').slice(1).join(' ');
 
-    currentTime.textContent = new Date().toLocaleTimeString('en-US');
     currentDay.textContent = `Happy ${days[new Date().getDay()]}!`;
     currentDate.textContent = trimDate;
-
+    if(!timeInterval) {
+        timeInterval = setInterval(showTime, 1000)
+    } else {
+        clearInterval(timeInterval);
+    }
+    showTime();
 }
 
 
