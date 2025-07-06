@@ -133,13 +133,16 @@ input::placeholder {
   gap: var(--padding);
   font-size: var(--normal-fonts);
   font-family: var(--task-font);
+  width: min(500px, 70vw);
+  /* border: 2px solid white; */
+  justify-content: center;
 }
 
 .filter {
   background: var(--container);
   border: none;
   color: white;
-  padding: 0.1rem 2rem;
+  padding: max(0.1rem, 5px) max(0.2rem, 2vh)
 }
 
 .filter:focus {
